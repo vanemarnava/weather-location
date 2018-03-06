@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WeatherIcons from 'react-weathericons';
-import {CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY} from './../../../constant/weathers.js';
+import {CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY, THUNDER, DRIZZLE} from './../../../constant/weathers.js';
 
 const StateToIconName = (weatherState) => {
   switch (weatherState) {
@@ -17,6 +17,10 @@ const StateToIconName = (weatherState) => {
       return 'snow';
     case WINDY:
       return 'windy';
+    case THUNDER:
+      return 'day-thunderstorm';
+    case DRIZZLE:
+      return 'day-showers';
     default:
     return 'day-sunny';
   }
